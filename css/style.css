@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif sans-serif;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    margin: 0;
+  }
+  
+  .title {
+    font-size: 3rem;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: rgb(0, 0, 0);
+  }
+  video {
+    object-fit: fill;
+  
+  }
+  
+  .screen {
+    cursor: pointer;
+    width: 50%;
+    background-color: #000 !important;
+  }
+  
+  .controls {
+    background: #333;
+    color: #fff;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .controls .btn {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .controls .fa-play {
+    font-size: 17px;
+    color: #ffffff;
+  }
+  
+  .controls .fa-stop {
+    font-size: 17px;
+    color: #000000;
+  }
+  
+  .controls .fa-pause {
+    color: #fff;
+  }
+  
+  .controls .timestamp {
+    font-size: small;
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  .btn:focus {
+    outline: 0;
+  }
+    
+  svg text {
+    letter-spacing: 5px;
+    stroke: #ec8836;
+    font-size: 30px;
+    font-weight: 700;
+    stroke-width: 3;
+  
+    animation: textAnimate 5s infinite alternate; 
+  }
+  
+  @keyframes textAnimate {
+    30% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:#292929;
+    }
+    
+    100% {
+      stroke-dasharray: 50% 0;
+      fill: #292929;
+    }
+    
+  }
+  
+  @media (max-width: 800px) {
+    .screen,
+    .controls {
+      width: 90%;
+    }
+  }
+  
